@@ -1,15 +1,56 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+import Section from "../components/section"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    
-  </Layout>
-)
+interface IndexProps {
+  data: {
+    allFile: {
+      edges: Array<{
+        node: {
+          internal: {
+            content: string
+          }
+        }
+      }>
+    }
+  }
+}
 
-export default IndexPage
+interface SectionType {
+  sections: Array<{
+    id: number
+    title: string
+    paragraphs: string[]
+  }>
+}
+
+const Index: React.FC<IndexProps> = ({ data }) => {
+  const { content } = data.allFile.edges[0].node.internal
+
+  const { sections }: SectionType = JSON.parse(content)
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <Section sections={sections} />
+    </Layout>
+  )
+}
+
+export default Index
+
+export const query = graphql`
+  {
+    allFile(filter: { sourceInstanceName: { eq: "data" } }) {
+      edges {
+        node {
+          internal {
+            content
+          }
+        }
+      }
+    }
+  }
+`

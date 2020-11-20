@@ -25,7 +25,13 @@ const Layout: React.FC = ({ children }) => {
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()},{` `}
-          <a href="http://linkedin.com.br/in/andre-zagatti">André Zagatti</a>
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            href="http://linkedin.com.br/in/andre-zagatti"
+          >
+            André Zagatti
+          </a>
         </footer>
       </Container>
     </>

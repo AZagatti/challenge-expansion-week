@@ -7,7 +7,6 @@ export const Container = styled.div`
   footer {
     margin-top: 2rem;
     a {
-      text-decoration: none;
       color: #fff;
     }
   }

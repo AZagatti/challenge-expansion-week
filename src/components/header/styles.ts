@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Container = styled.header`
-  background: rebeccapurple;
+  background: #262626;
   margin-bottom: 1.45rem;
   div {
     margin: 0 auto;

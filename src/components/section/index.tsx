@@ -1,10 +1,10 @@
 import React from "react"
 import parse from "html-react-parser"
 
-import Call from "../images/call.svg"
-import Chat from "../images/chat.svg"
-import Text from "../images/text.svg"
-import Communication from "../images/communication.svg"
+import Call from "../../images/call.svg"
+import Chat from "../../images/chat.svg"
+import Text from "../../images/text.svg"
+import Communication from "../../images/communication.svg"
 
 import Svg from "../svg"
 

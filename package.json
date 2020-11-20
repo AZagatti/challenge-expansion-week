@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "expansion-week-challenge",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Comunicação",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "André Zagatti <andre.zagatti1@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.26.1",

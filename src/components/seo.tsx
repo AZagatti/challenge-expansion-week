@@ -11,7 +11,9 @@ function SEO({ description, lang, meta, title }: any) {
           siteMetadata {
             title
             description
-            author
+            author {
+              name
+            }
           }
         }
       }
